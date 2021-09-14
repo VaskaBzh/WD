@@ -237,11 +237,11 @@ html {
     width: 25%;
 }
 
-a:link {
+.a-link {
     position: relative;
 } 
 
-a.a-nav:hover::before {
+.a-nav:hover::before {
     content:"";
     background: rgba(0, 0, 0, 0.5) url(../img/view.png) no-repeat center;
     position:absolute;
