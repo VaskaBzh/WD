@@ -61,7 +61,7 @@ html {
     background:#EEEFF1;
     padding-top: 250px;
     padding-bottom: 153px;
-    margin-top: -110px;;
+    margin-top: -110px;
 }
 
 .hero_img {
@@ -95,6 +95,12 @@ html {
     cursor: pointer;
     outline: none;
     border: none;
+    transition-duration: 300ms;
+    transition-property: all;
+}
+
+.button:hover {
+    transform: scale(1.05);
 }
 
 .button_primary {
@@ -103,7 +109,7 @@ html {
 }
 
 .section_about {
-    
+    padding: 100px 0;
 }
 
 .section_title {
@@ -115,7 +121,7 @@ html {
 }
 
 .block_info {
-    min-height: 359px;
+    min-height: 147px;
     max-width: 540px;
     width:100%;    
     display: flex;
@@ -197,6 +203,23 @@ html {
     min-height: 450px;
 }
 
+.white_man {
+    animation-name: opacity1; 
+    animation-duration: 3s;
+}
+
+@keyframes opacity1 {
+    from {
+        opacity: 0,1;
+        margin-left: -1000px;
+    }
+
+    to {
+        opacity: 1;
+        margin-left: 0;
+    }
+}
+
 .line {
     margin-top: 20px;
     margin-bottom: 30px;
@@ -204,7 +227,23 @@ html {
     width: 100%;
     height: 4px;
     background: linear-gradient(to right,#34547A 75%,
-    #C4C4C4 25%)
+    #C4C4C4 25%);
+    animation-duration: 2s;
+    animation-name: opacity; 
+}
+
+
+
+@keyframes opacity {
+    from {
+        opacity: 0,1;
+        margin-left: -1000px;
+    }
+
+    to {
+        opacity: 1;
+        margin-left: 0;
+    }
 }
 
 .section_smeh {
@@ -214,14 +253,14 @@ html {
 }
 
 .videoki {
-    background: url(../img/Rectangle\ 5\ \(1\).png);
+    background: url(../img/Rectangle5.png);
     max-width: 1110px;
     width: 100%;
     min-height: 600px;
     display: flex;
     justify-content: center;
-    align-items:  center
-;
+    align-items:  center;
+    cursor: pointer;
 }
 
 .button2 {
@@ -259,7 +298,7 @@ html {
     left:0;
     width: 100%;
     height: 100%;
-    z-index: index 500;
+    z-index: 500;
 }
 
 .img1 {
@@ -323,7 +362,7 @@ html {
 }
 
 .footer {
-    max-height: 151px;
+    min-height: 151px;
     background-color: #34547A;
 }
 
@@ -355,6 +394,13 @@ html {
 
 .vk_link {
     margin-right: 22px;
+    transition-duration: 300ms;
+    transition-property: all;
+}
+
+
+.vk_link:hover {
+    transform: scale(1.1);
 }
 
 .p_question {
@@ -362,6 +408,8 @@ html {
 }
 
 @media (max-width: 1024px) {
+
+
 
 .container {
     width: 95%;
@@ -386,10 +434,15 @@ html {
 
 .hero_img {
     margin-left: 0;
-)
+}
+
 }
 
 @media (max-width: 768px) {
+
+.logo {
+    margin-bottom: 15px;
+}
 
 .start {
     display: flex;
@@ -401,8 +454,10 @@ html {
     display: none;
 }
 
+
 .section_hero {
-    padding-top: 130px;
+    margin-top: -150px;
+    padding-top: 150px;
     padding-bottom: 30px;
 }
 
@@ -423,6 +478,12 @@ html {
 
 .wrap:nth-child(2n) {
     display: none;
+}
+
+.flex {
+    max-width: 1125px;
+    width: 75%;
+    margin: auto;
 }
 
 .section_b {
@@ -446,14 +507,32 @@ html {
 }
 }
 
+@media (max-width: 540px) {
+
+.flex {
+    width: 95%;
+}
+
+.section_a {
+    display: none;
+}
+
+.section_smeh {
+    display: none;
+}
+}
+
 @media (max-width: 425px) {
+
+.section_hero {
+    margin-top: -150px;
+    padding-top: 130px;
+    padding-bottom: 30px;
+}
+
 .nav_item {
     line-height: 15px;
     font-size: 75%;
-}
-
-.logo {
-    display: none;
 }
 
 .section_b {
@@ -468,5 +547,76 @@ html {
     display: none;
 }
 
+.section_rectal {
+    padding-top: 20px;
+}
 
+.section_about {
+    padding-bottom: 0;
+    padding-top: 25px;
+}
+
+.block_info {
+    padding-bottom: 20px;
+    border-bottom: 2px solid #34547A;
+}
+
+.input--half {
+    margin-right: 5px;
+}
+
+.input--half:nth-child(2) {
+    margin-right: 0;
+}
+
+.vk_link {
+    margin-right: 0;
+}
+
+.hero_info {
+    margin-top: 15px;
+}
+}
+
+@media (max-width: 414px) {
+
+.header {
+    margin-top: 0;
+    padding-top: 20px;
+}
+
+.section_hero {
+    padding-top: 150px;
+}
+
+.hero_title {
+    text-align: center;
+}
+
+}
+
+@media (max-width: 375px) {
+
+.vk_links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-right: 10px;
+}
+
+.footer_desc {
+    padding: 15px 0;
+}
+
+.footer {
+    min-height: 75%;
+}
+}
+
+@media (max-width: 320px) {
+
+.nav_item {
+    font-size: 60%;
+}
+    
 }
